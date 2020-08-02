@@ -13,6 +13,6 @@ def lambda_handler(event, context):
     http=urllib3.PoolManager()
     s3.upload_fileobj(http.request('GET', url,preload_content=False), bucket, key)
     return {
-        'statusCode': 200,
+        'statusCode': 2000,
         'body': json.dumps('Hello from Lambda!')
     }
